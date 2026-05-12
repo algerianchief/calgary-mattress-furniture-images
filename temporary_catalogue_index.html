@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calgary Mattress & Furniture Delivery Catalogue</title>
+<style>
+  :root {
+    --navy:#071d33;
+    --gold:#f6b313;
+    --bg:#f6f7f9;
+    --card:#ffffff;
+    --text:#172033;
+    --muted:#64748b;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  header {
+    background:linear-gradient(135deg,var(--navy),#0d2d4d);
+    color:white;
+    padding:28px 18px;
+    text-align:center;
+  }
+  header h1 {
+    margin:0 0 8px;
+    font-size:clamp(26px,5vw,46px);
+    letter-spacing:.3px;
+  }
+  header p {
+    margin:6px auto;
+    max-width:760px;
+    color:#e7eef7;
+    line-height:1.45;
+  }
+  .badges {
+    margin-top:18px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+  .badge {
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.18);
+    padding:9px 12px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:14px;
+  }
+  .cta {
+    display:inline-block;
+    margin-top:18px;
+    background:var(--gold);
+    color:#071d33;
+    text-decoration:none;
+    font-weight:800;
+    padding:12px 18px;
+    border-radius:12px;
+  }
+  .wrap {
+    max-width:1160px;
+    margin:0 auto;
+    padding:18px;
+  }
+  .notice {
+    background:#fff7df;
+    border:1px solid #f3d27a;
+    color:#463407;
+    border-radius:14px;
+    padding:13px 15px;
+    margin:16px 0;
+    line-height:1.45;
+  }
+  .controls {
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:10px;
+    margin:18px 0;
+  }
+  @media(min-width:760px) {
+    .controls {
+      grid-template-columns: 1.4fr .8fr .8fr;
+      align-items:center;
+    }
+  }
+  input, select {
+    width:100%;
+    padding:12px 12px;
+    border-radius:12px;
+    border:1px solid #d5dce6;
+    font-size:15px;
+    background:white;
+  }
+  .count {
+    color:var(--muted);
+    font-weight:700;
+    margin:8px 0 14px;
+  }
+  .grid {
+    display:grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap:14px;
+  }
+  @media(min-width:560px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media(min-width:920px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .card {
+    background:var(--card);
+    border:1px solid #e3e8ef;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(15,23,42,.05);
+    display:flex;
+    flex-direction:column;
+  }
+  .imgbox {
+    aspect-ratio: 4/3;
+    background:#eef2f7;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .imgbox img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+  .body {
+    padding:14px;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+    flex:1;
+  }
+  .title {
+    font-weight:800;
+    line-height:1.25;
+    font-size:16px;
+  }
+  .meta {
+    display:flex;
+    justify-content:space-between;
+    gap:8px;
+    align-items:center;
+  }
+  .cat {
+    color:var(--muted);
+    font-size:13px;
+    font-weight:700;
+  }
+  .price {
+    font-size:18px;
+    font-weight:900;
+    color:#0f3b63;
+    white-space:nowrap;
+  }
+  .msg {
+    margin-top:auto;
+    text-align:center;
+    display:block;
+    background:var(--navy);
+    color:white;
+    text-decoration:none;
+    padding:11px 12px;
+    border-radius:12px;
+    font-weight:800;
+  }
+  footer {
+    text-align:center;
+    color:var(--muted);
+    padding:28px 16px 40px;
+    font-size:13px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Calgary Mattress & Furniture Delivery</h1>
+  <p>Affordable mattresses, bedframes, couches, night tables, dressers, and other furniture options available for Calgary delivery.</p>
+  <div class="badges">
+    <span class="badge">🚚 Free same-day delivery in Calgary</span>
+    <span class="badge">💵 Pay on delivery</span>
+    <span class="badge">🛏️ New & clearance options</span>
+  </div>
+  <a class="cta" href="https://www.facebook.com/profile.php?id=61589364161922" target="_blank">Message us on Facebook</a>
+</header>
+
+<div class="wrap">
+  <div class="notice">
+    Stock changes quickly. Message us with the item name or screenshot to confirm availability, delivery time, stairs/elevator details, and final setup needs.
+  </div>
+
+  <div class="controls">
+    <input id="search" placeholder="Search: queen, king, couch, bedframe...">
+    <select id="category">
+      <option value="">All categories</option>
+      <option>Mattresses</option>
+      <option>Bedframes</option>
+      <option>Couches</option>
+      <option>Other Furniture</option>
+    </select>
+    <select id="sort">
+      <option value="default">Sort: Featured</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+      <option value="az">Name: A to Z</option>
+    </select>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<footer>
+  Prices shown are current listing prices from the latest catalogue feed. Availability is confirmed by message before delivery.
+</footer>
+
+<script>
+const ITEMS = [{"id": "CMFD-001-QUEEN", "title": "Queen Lt-125 Grey Velvet Hydraulic Storage Bedframe", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/001_lt_125_grey_velvet_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-002-QUEEN", "title": "Queen Ar-08 Black PVC Hydraulic Storage Bedframe", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/002_ar_08_black_pvc_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-003-QUEEN", "title": "Queen Lb-123 Beige Velvet Hydraulic Storage Bedframe", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/003_lb_123_beige_velvet_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-004-QUEEN", "title": "Queen Ld-01 Light Grey Velvet Hydraulic Storage Bedframe", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/004_ld_01_light_grey_velvet_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-005-TWIN", "title": "Twin Lt-148 Grey Hydraulic Storage Bedframe", "price": "380", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/005_lt_148_grey_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-005-FULL", "title": "Full Lt-148 Grey Hydraulic Storage Bedframe", "price": "400", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/005_lt_148_grey_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-005-QUEEN", "title": "Queen Lt-148 Grey Hydraulic Storage Bedframe", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/005_lt_148_grey_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-006-FULL", "title": "Full Vfb-04 Ivory Velvet Hydraulic Storage Lift Up Bedframe", "price": "380", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/006_vfb_04_ivory_velvet_hydraulic_storage_lift_up_bedframe.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-006-QUEEN", "title": "Queen Vfb-04 Ivory Velvet Hydraulic Storage Lift Up Bedframe", "price": "400", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/006_vfb_04_ivory_velvet_hydraulic_storage_lift_up_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-007-QUEEN", "title": "Queen Ml-2306 Beige Leather Hydraulic Storage Bedframe", "price": "400", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/007_ml_2306_beige_leather_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-008-QUEEN", "title": "Queen Ml-2306 White PVC Leather Hydraulic Storage Bedframe", "price": "400", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/008_ml_2306_white_pvc_leather_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-008-KING", "title": "King Ml-2306 White PVC Leather Hydraulic Storage Bedframe", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/008_ml_2306_white_pvc_leather_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-009-FULL", "title": "Full Ml-1505 White PVC Leather Hydraulic Storage Bedframe", "price": "380", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/009_ml_1505_white_pvc_leather_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-010-QUEEN", "title": "Queen 4 Drawer Grey Wood Storage Bed (With Lights + Charging Options)", "price": "349", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/010_4_drawer_grey_wood_storage_bed_with_lights_charging_options.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-010-KING", "title": "King 4 Drawer Grey Wood Storage Bed (With Lights + Charging Options)", "price": "449", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/010_4_drawer_grey_wood_storage_bed_with_lights_charging_options.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-011-TWIN", "title": "Twin 6230 Black Leather Bed (No Box Spring Needed)", "price": "260", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/011_6230_black_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-011-FULL", "title": "Full 6230 Black Leather Bed (No Box Spring Needed)", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/011_6230_black_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-011-QUEEN", "title": "Queen 6230 Black Leather Bed (No Box Spring Needed)", "price": "300", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/011_6230_black_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-011-KING", "title": "King 6230 Black Leather Bed (No Box Spring Needed)", "price": "380", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/011_6230_black_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-012-QUEEN", "title": "Queen 6210 Black Leather Bed (No Box Spring Needed)", "price": "300", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/012_6210_black_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-012-KING", "title": "King 6210 Black Leather Bed (No Box Spring Needed)", "price": "380", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/012_6210_black_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-013-FULL", "title": "Full 2903 Black Leather Bed (No Box Spring Needed)", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/013_2903_black_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-013-QUEEN", "title": "Queen 2903 Black Leather Bed (No Box Spring Needed)", "price": "300", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/013_2903_black_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-014-QUEEN", "title": "Queen 6610 Black Velvet Bed (No Box Spring Needed)", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/014_6610_black_velvet_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-015-TWIN", "title": "Twin 2806 Beige Velvet Bed Frame (No Box Spring Needed)", "price": "200", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/015_2806_beige_velvet_bed_frame_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-015-FULL", "title": "Full 2806 Beige Velvet Bed Frame (No Box Spring Needed)", "price": "220", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/015_2806_beige_velvet_bed_frame_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-015-KING", "title": "King 2806 Beige Velvet Bed Frame (No Box Spring Needed)", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/015_2806_beige_velvet_bed_frame_no_box_spring_needed.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-016-QUEEN", "title": "Queen PVC Black 2 Drawer Storage Bed Frame (Led + Charging Options)", "price": "320", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/016_pvc_black_2_drawer_storage_bed_frame_led_charging_options.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-017-TWIN", "title": "Twin 2806 Light Grey Velvet Bed (No Box Spring Needed)", "price": "200", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/017_2806_light_grey_velvet_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-018-TWIN", "title": "Twin 2806 Dark Grey Velvet Bed (No Box Spring Needed)", "price": "200", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/018_2806_dark_grey_velvet_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-018-KING", "title": "King 2806 Dark Grey Velvet Bed (No Box Spring Needed)", "price": "260", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/018_2806_dark_grey_velvet_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-019-FULL", "title": "Full 1002 Black Button Tufted Leather Bed (No Box Spring Needed)", "price": "240", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/019_1002_black_button_tufted_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-019-KING", "title": "King 1002 Black Button Tufted Leather Bed (No Box Spring Needed)", "price": "300", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/019_1002_black_button_tufted_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-020-FULL", "title": "Full 1002 White PVC Button Tufted Leather Bed (No Box Spring Needed)", "price": "240", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/020_1002_white_pvc_button_tufted_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-020-KING", "title": "King 1002 White PVC Button Tufted Leather Bed (No Box Spring Needed)", "price": "300", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/020_1002_white_pvc_button_tufted_leather_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-021-TWIN", "title": "Twin B-101G Grey Wooden Bunk Bed (No Box Spring Needed)", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/021_b_101g_grey_wooden_bunk_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-022-TWIN", "title": "Twin B-124W White Solid Wooden Bunk Bed (No Box Spring Needed)", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/022_b_124w_white_solid_wooden_bunk_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-023-TWIN", "title": "Twin B-101E Esspresso Wooden Bunk Bed (No Box Spring Needed)", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/023_b_101e_esspresso_wooden_bunk_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-024-TWIN", "title": "Twin B-124E Esspresso Wooden Bunk Bed (No Box Spring Needed)", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/024_b_124e_esspresso_wooden_bunk_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-025-TWIN", "title": "Twin B-101W White Solid Wooden Bunk Bed (No Box Spring Needed)", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/025_b_101w_white_solid_wooden_bunk_bed_no_box_spring_needed.jpg", "category": "Bedframes", "size": "Twin"}, {"id": "CMFD-026-SET", "title": "Set T-1405 Round White Finnish Table Set With 4 Chairs", "price": "640", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/026_t_1405_round_white_finnish_table_set_with_4_chairs.jpg", "category": "Other Furniture", "size": "Set"}, {"id": "CMFD-027-SET", "title": "Set T-1429 Round Glass Table With Choice Of Chairs", "price": "640", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/027_t_1429_round_glass_table_with_choice_of_chairs.jpg", "category": "Other Furniture", "size": "Set"}, {"id": "CMFD-028-3-PIECE-SET", "title": "3 Piece Set Luxury Grey Velvet Button Tufted Sofa Set", "price": "1349", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/028_luxury_grey_velvet_button_tufted_sofa_set.jpg", "category": "Couches", "size": "3 Piece Set"}, {"id": "CMFD-029-SOFA-BED", "title": "Sofa Bed Klwaz Sectional Sofa Bed", "price": "940", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/029_klwaz_sectional_sofa_bed.jpg", "category": "Bedframes", "size": "Sofa Bed"}, {"id": "CMFD-030-SOFA-BED", "title": "Sofa Bed Klwaz Sectional Sofa Bed", "price": "940", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/030_klwaz_sectional_sofa_bed.jpg", "category": "Bedframes", "size": "Sofa Bed"}, {"id": "CMFD-031-EACH", "title": "Each Black PVC Nightstand – 3 Drawer (With Features)", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/031_black_pvc_nightstand_3_drawer_with_features.jpg", "category": "Other Furniture", "size": "Each"}, {"id": "CMFD-032-EACH", "title": "Each Grey PVC Nightstand – 3 Drawer (With Features)", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/032_grey_pvc_nightstand_3_drawer_with_features.jpg", "category": "Other Furniture", "size": "Each"}, {"id": "CMFD-033-EACH", "title": "Each White Plastic & Wooden Leg Chair", "price": "145", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/033_white_plastic_wooden_leg_chair.jpg", "category": "Other Furniture", "size": "Each"}, {"id": "CMFD-034-EACH", "title": "Each Dc 1939 Beige Metal Black Powder Coating Chair", "price": "170", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/034_dc_1939_beige_metal_black_powder_coating_chair.jpg", "category": "Other Furniture", "size": "Each"}, {"id": "CMFD-035-QUEEN", "title": "Queen Vfb-04 Ivory Velvet Hydraulic Storage Lift Up Bedframe", "price": "400", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/035_vfb_04_ivory_velvet_hydraulic_storage_lift_up_bedframe.jpg", "category": "Bedframes", "size": "Queen"}, {"id": "CMFD-036-FULL", "title": "Full Ml-1505 Beige PVC Leather Hydraulic Storage Bedframe", "price": "380", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/036_ml_1505_beige_pvc_leather_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-037-QUEEN", "title": "Queen Klwaz 9\" Memory Foam Mattress (In A Box)", "price": "285", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/037_klwaz_9_memory_foam_mattress_in_a_box.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-038-QUEEN", "title": "Queen Klwaz In Box 9\" Extreme Foam Mattress", "price": "265", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/038_klwaz_in_box_9_extreme_foam_mattress.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-039-TWIN", "title": "Twin 9\" Sova Certified Organic Cotton", "price": "260", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/039_9_sova_certified_organic_cotton.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-039-FULL", "title": "Full 9\" Sova Certified Organic Cotton", "price": "270", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/039_9_sova_certified_organic_cotton.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-039-QUEEN", "title": "Queen 9\" Sova Certified Organic Cotton", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/039_9_sova_certified_organic_cotton.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-039-KING", "title": "King 9\" Sova Certified Organic Cotton", "price": "349", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/039_9_sova_certified_organic_cotton.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-040-TWIN", "title": "Twin 12\" Sova Almz Bamboo Certified Pillow Top", "price": "340", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/040_12_sova_almz_bamboo_certified_pillow_top.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-040-FULL", "title": "Full 12\" Sova Almz Bamboo Certified Pillow Top", "price": "400", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/040_12_sova_almz_bamboo_certified_pillow_top.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-040-QUEEN", "title": "Queen 12\" Sova Almz Bamboo Certified Pillow Top", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/040_12_sova_almz_bamboo_certified_pillow_top.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-040-KING", "title": "King 12\" Sova Almz Bamboo Certified Pillow Top", "price": "600", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/040_12_sova_almz_bamboo_certified_pillow_top.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-041-TWIN", "title": "Twin 14\" Sova Luxury La Rêve Eurotop Pocket Coil Mattress", "price": "480", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/041_14_sova_luxury_la_r_ve_eurotop_pocket_coil_mattress.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-041-FULL", "title": "Full 14\" Sova Luxury La Rêve Eurotop Pocket Coil Mattress", "price": "640", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/041_14_sova_luxury_la_r_ve_eurotop_pocket_coil_mattress.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-041-QUEEN", "title": "Queen 14\" Sova Luxury La Rêve Eurotop Pocket Coil Mattress", "price": "740", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/041_14_sova_luxury_la_r_ve_eurotop_pocket_coil_mattress.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-041-KING", "title": "King 14\" Sova Luxury La Rêve Eurotop Pocket Coil Mattress", "price": "940", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/041_14_sova_luxury_la_r_ve_eurotop_pocket_coil_mattress.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-042-TWIN", "title": "Twin 14\" Sova Luxury 2.0 Organic Cotton Pillow Top", "price": "400", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/042_14_sova_luxury_2_0_organic_cotton_pillow_top.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-042-FULL", "title": "Full 14\" Sova Luxury 2.0 Organic Cotton Pillow Top", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/042_14_sova_luxury_2_0_organic_cotton_pillow_top.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-042-QUEEN", "title": "Queen 14\" Sova Luxury 2.0 Organic Cotton Pillow Top", "price": "500", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/042_14_sova_luxury_2_0_organic_cotton_pillow_top.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-042-KING", "title": "King 14\" Sova Luxury 2.0 Organic Cotton Pillow Top", "price": "640", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/042_14_sova_luxury_2_0_organic_cotton_pillow_top.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-043-TWIN", "title": "Twin 10\" Sova Bamboo Breeze Mattress", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/043_10_sova_bamboo_breeze_mattress.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-043-FULL", "title": "Full 10\" Sova Bamboo Breeze Mattress", "price": "300", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/043_10_sova_bamboo_breeze_mattress.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-043-QUEEN", "title": "Queen 10\" Sova Bamboo Breeze Mattress", "price": "320", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/043_10_sova_bamboo_breeze_mattress.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-043-KING", "title": "King 10\" Sova Bamboo Breeze Mattress", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/043_10_sova_bamboo_breeze_mattress.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-044-TWIN", "title": "Twin 5\" Sova Bamboo Pure Foam Mattress", "price": "220", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/044_5_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-044-FULL", "title": "Full 5\" Sova Bamboo Pure Foam Mattress", "price": "260", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/044_5_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-044-QUEEN", "title": "Queen 5\" Sova Bamboo Pure Foam Mattress", "price": "300", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/044_5_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-045-TWIN", "title": "Twin 7\" Sova Bamboo Pure Foam Mattress", "price": "240", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/045_7_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-045-FULL", "title": "Full 7\" Sova Bamboo Pure Foam Mattress", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/045_7_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-045-QUEEN", "title": "Queen 7\" Sova Bamboo Pure Foam Mattress", "price": "340", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/045_7_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-045-KING", "title": "King 7\" Sova Bamboo Pure Foam Mattress", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/045_7_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-046-TWIN", "title": "Twin 9\" Sova Bamboo Pure Foam Mattress", "price": "280", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/046_9_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-046-FULL", "title": "Full 9\" Sova Bamboo Pure Foam Mattress", "price": "380", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/046_9_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-046-QUEEN", "title": "Queen 9\" Sova Bamboo Pure Foam Mattress", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/046_9_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-046-KING", "title": "King 9\" Sova Bamboo Pure Foam Mattress", "price": "580", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/046_9_sova_bamboo_pure_foam_mattress.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-047-TWIN", "title": "Twin 9.5\" Sova 2-Sided Rock High Density Mattress", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/047_9_5_sova_2_sided_rock_high_density_mattress.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-047-FULL", "title": "Full 9.5\" Sova 2-Sided Rock High Density Mattress", "price": "540", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/047_9_5_sova_2_sided_rock_high_density_mattress.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-047-QUEEN", "title": "Queen 9.5\" Sova 2-Sided Rock High Density Mattress", "price": "640", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/047_9_5_sova_2_sided_rock_high_density_mattress.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-047-KING", "title": "King 9.5\" Sova 2-Sided Rock High Density Mattress", "price": "740", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/047_9_5_sova_2_sided_rock_high_density_mattress.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-048-TWIN", "title": "Twin 7\" Sova 1 Sided Rock High Density Mattress", "price": "340", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/048_7_sova_1_sided_rock_high_density_mattress.jpg", "category": "Mattresses", "size": "Twin"}, {"id": "CMFD-048-FULL", "title": "Full 7\" Sova 1 Sided Rock High Density Mattress", "price": "420", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/048_7_sova_1_sided_rock_high_density_mattress.jpg", "category": "Mattresses", "size": "Full"}, {"id": "CMFD-048-QUEEN", "title": "Queen 7\" Sova 1 Sided Rock High Density Mattress", "price": "480", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/048_7_sova_1_sided_rock_high_density_mattress.jpg", "category": "Mattresses", "size": "Queen"}, {"id": "CMFD-048-KING", "title": "King 7\" Sova 1 Sided Rock High Density Mattress", "price": "540", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/048_7_sova_1_sided_rock_high_density_mattress.jpg", "category": "Mattresses", "size": "King"}, {"id": "CMFD-049-TWIN", "title": "Twin 7\" Regular & Split Box Spring – Black Fabric", "price": "180", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/049_7_regular_split_box_spring_black_fabric.jpg", "category": "Other Furniture", "size": "Twin"}, {"id": "CMFD-049-FULL", "title": "Full 7\" Regular & Split Box Spring – Black Fabric", "price": "190", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/049_7_regular_split_box_spring_black_fabric.jpg", "category": "Other Furniture", "size": "Full"}, {"id": "CMFD-049-QUEEN", "title": "Queen 7\" Regular & Split Box Spring – Black Fabric", "price": "200", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/049_7_regular_split_box_spring_black_fabric.jpg", "category": "Other Furniture", "size": "Queen"}, {"id": "CMFD-049-KING-SPLIT", "title": "King Split 7\" Regular & Split Box Spring – Black Fabric", "price": "240", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/049_7_regular_split_box_spring_black_fabric.jpg", "category": "Other Furniture", "size": "King Split"}, {"id": "CMFD-049-QUEEN-SPLIT", "title": "Queen Split 7\" Regular & Split Box Spring – Black Fabric", "price": "240", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/049_7_regular_split_box_spring_black_fabric.jpg", "category": "Other Furniture", "size": "Queen Split"}, {"id": "CMFD-050-KING", "title": "King Lb-123 Grey Velvet Hydraulic Storage Bedframe", "price": "749", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/050_lb_123_grey_velvet_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "King"}, {"id": "CMFD-051-FULL", "title": "Full Ld-01 Dark Grey Velvet Hydraulic Storage Bedframe", "price": "400", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/051_ld_01_dark_grey_velvet_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Full"}, {"id": "CMFD-051-QUEEN", "title": "Queen Ld-01 Dark Grey Velvet Hydraulic Storage Bedframe", "price": "440", "image": "https://raw.githubusercontent.com/algerianchief/calgary-mattress-furniture-images/main/051_ld_01_dark_grey_velvet_hydraulic_storage_bedframe.jpg", "category": "Bedframes", "size": "Queen"}];
+const PAGE_URL = "https://www.facebook.com/profile.php?id=61589364161922";
+
+function numericPrice(p) {
+  const n = parseFloat(String(p).replace(/[^0-9.]/g, ""));
+  return Number.isFinite(n) ? n : 0;
+}
+
+function render() {
+  const q = document.getElementById("search").value.toLowerCase().trim();
+  const cat = document.getElementById("category").value;
+  const sort = document.getElementById("sort").value;
+  let rows = ITEMS.filter(x => {
+    const hay = (x.title + " " + x.category + " " + x.size).toLowerCase();
+    return (!q || hay.includes(q)) && (!cat || x.category === cat);
+  });
+  if (sort === "low") rows.sort((a,b)=>numericPrice(a.price)-numericPrice(b.price));
+  if (sort === "high") rows.sort((a,b)=>numericPrice(b.price)-numericPrice(a.price));
+  if (sort === "az") rows.sort((a,b)=>a.title.localeCompare(b.title));
+  document.getElementById("count").textContent = rows.length + " items showing";
+  document.getElementById("grid").innerHTML = rows.map(x => `
+    <article class="card">
+      <div class="imgbox"><img src="${x.image}" alt="${x.title.replaceAll('"','&quot;')}" loading="lazy"></div>
+      <div class="body">
+        <div class="meta">
+          <span class="cat">${x.category}${x.size ? " • " + x.size : ""}</span>
+          <span class="price">CA${x.price}</span>
+        </div>
+        <div class="title">${x.title}</div>
+        <a class="msg" href="${PAGE_URL}" target="_blank">Message to check availability</a>
+      </div>
+    </article>
+  `).join("");
+}
+
+document.getElementById("search").addEventListener("input", render);
+document.getElementById("category").addEventListener("change", render);
+document.getElementById("sort").addEventListener("change", render);
+render();
+</script>
+</body>
+</html>
